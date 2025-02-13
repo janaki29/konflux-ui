@@ -10,11 +10,11 @@ import { GIT_PROVIDER_ANNOTATION_VALUE } from '../../../utils/component-utils';
 import { ImportFormValues } from '../type';
 import GitOptions from './GitOptions';
 
-export const SourceSection = ({ namespace, workspace }: WorkspaceInfoProps) => {
+export const SourceSection = ({ namespace }: WorkspaceInfoProps) => {
   const [, { touched, error }] = useField('source.git.url');
   const [isGitAdvancedOpen, setGitAdvancedOpen] = React.useState<boolean>(false);
   const { touched: touchedValues, setFieldValue } = useFormikContext<ImportFormValues>();
-  const [allComponents] = useAllComponents(namespace, workspace);
+  const [allComponents] = useAllComponents(namespace, namespace);
   const validated = touched
     ? touched && !error
       ? ValidatedOptions.success

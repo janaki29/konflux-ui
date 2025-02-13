@@ -15,7 +15,7 @@ import { SourceSection } from './SourceSection';
 
 import './ComponentSection.scss';
 
-export const ComponentSection = ({ namespace, workspace }: WorkspaceInfoProps) => {
+export const ComponentSection = ({ namespace }: WorkspaceInfoProps) => {
   const { values } = useFormikContext<ImportFormValues>();
   return (
     <FormSection>
@@ -25,7 +25,7 @@ export const ComponentSection = ({ namespace, workspace }: WorkspaceInfoProps) =
           A component is an image built from source code repository.
         </Text>
       </TextContent>
-      <SourceSection namespace={namespace} workspace={workspace} />
+      <SourceSection namespace={namespace} />
       <InputField
         name="source.git.dockerfileUrl"
         label="Docker file"
