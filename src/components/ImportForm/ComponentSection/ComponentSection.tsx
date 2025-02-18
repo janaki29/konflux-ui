@@ -40,7 +40,7 @@ export const ComponentSection = ({ namespace }: WorkspaceInfoProps) => {
       <HelperText>
         <HelperTextItem>
           Must be unique within tenant namespace{' '}
-          <span className="component-section-helper-text-namespace-highlighted">{namespace}</span>
+          <span className="component-section__component-name__helper-text">{namespace}</span>
         </HelperTextItem>
       </HelperText>
       {values.source.git.url ? (
