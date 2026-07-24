@@ -32,21 +32,12 @@
 .line-number__line-number {
   font-family: var(--pf-t--global--font--family--mono);
   font-size: var(--pf-t--global--font--size--sm);
-  color: var(--pf-t--global--text--color--subtle);
+  color: var(--pf-v6-c-log-viewer__index--Color);
   text-decoration: none;
   cursor: pointer;
 
   &:hover {
     color: var(--pf-t--global--text--color--regular);
     text-decoration: underline;
-  }
-
-  .pf-m-dark & {
-    color: var(--pf-t--global--text--color--subtle);
-
-    &:hover {
-      color: var(--pf-v6-global--palette--white-300);
-      text-decoration: underline;
-    }
   }
 }
